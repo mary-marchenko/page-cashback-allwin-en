@@ -1,0 +1,414 @@
+$white: #FFF
+$white2: #FBFCFD
+$white3: #D3D9EA
+$grayTitle: #BFBFBF
+$black: #090A18
+$blue: #3396D3
+$green-blue: #00CDCF
+$green-blue-hover: #00b4b7
+$green: #112D3F
+$dark-gray: rgba(255, 255, 255, 0.10)
+$dark-gray2: rgba(255, 255, 255, 0.2)
+
+//$gray: #D3D9EA
+//$green-blue: #00CDCF
+//$green-blue-hover-maket: #09D6D8
+//$green-blue-hover: #00b4b7
+//$blue: #3396D3
+//$green-border: #163C52
+//$green-line: #13354A
+
+
+$font-exo2-semiBold: 'Exo2-SemiBold', sans-serif // 600
+$font-exo2-bold: 'Exo2-Bold', sans-serif // 700
+$font-exo2-regular: 'Exo2-Regular', sans-serif // 400
+$font-display-medium: 'WinDisplay-NormalMedium', sans-serif // 500
+$font-text-bold: 'WinText-Bold', sans-serif // 700
+$font-roboto-bold: 'RobotoCondensed-Bold', sans-serif // 700
+
+
+.hide
+  display: none !important
+
+body
+  overscroll-behavior: none
+  -webkit-tap-highlight-color: transparent
+  background: $black
+  img
+    max-width: 100%
+    height: auto
+  & > *
+    font-family: inherit
+
+.allWin-page
+  overflow: hidden
+  -webkit-tap-highlight-color: transparent
+
+//test
+.menu-btn
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 20
+  width: fit-content
+  background: white
+  padding: 3px
+
+.menu-test
+  position: fixed
+  left: 0
+  top: 25px
+  z-index: 20
+  display: flex
+  gap: 2px
+  flex-direction: column
+  & > button
+    width: fit-content
+    background: white
+    color: black
+    padding: 2px
+    font-family: inherit
+    border-radius: 2px
+
+.allWin-page
+  .btn
+    font-family: $font-exo2-semiBold
+    font-size: 18px
+    line-height: 18px
+    background-color: $green-blue
+    color: $black
+    min-width: 121px
+    height: 50px
+    border-radius: 6px
+    max-width: fit-content
+    text-transform: uppercase
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: background .7s ease-in-out
+    animation: pulseScale 3s ease-in-out infinite
+    &:hover
+      cursor: pointer
+      background-color: $green-blue-hover
+  .container
+    max-width: 768px
+    margin: auto
+    position: relative
+  .banner
+    display: block
+    position: relative
+    .container
+      max-width: 1366px
+      position: relative
+      height: fit-content
+    &__wrapp
+      z-index: 2
+      position: absolute
+      left: 90px
+      top: 0
+      width: 95%
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      gap: 40px
+    &__title
+      gap: 18px
+      display: flex
+      flex-direction: column
+      &-top
+        font-family: $font-display-medium
+        font-size: 40px
+        line-height: 100%
+        text-transform: uppercase
+        color: $white2
+      &-bottom
+        border-radius: 6px
+        height: 54px
+        padding: 18px 24px 13px 20px
+        width: fit-content
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $blue
+        font-family: $font-text-bold
+        font-size: 32px
+        line-height: 32px
+        text-transform: uppercase
+        color: $white2
+        position: relative
+        span
+          //font-family: $font-exo2-bold
+          font-size: 25px
+          position: absolute
+          top: 10px
+          right: 12px
+    &__info
+      color: $grayTitle
+      font-family: $font-exo2-regular
+      position: absolute
+      right: 65px
+      top: 50%
+      transform-origin: top right
+      font-size: 8px
+      line-height: 11px
+      transform: rotate(-90deg) translateX(50%)
+      width: 306px
+      height: 41px
+  ._wrapper
+    margin: 75px auto
+    gap: 32px
+    width: 1194px
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    &__right
+      min-width: 438px
+    &__left
+      gap: 16px
+      display: flex
+      flex-direction: column
+    &__topTitle
+      font-family: $font-roboto-bold
+      font-size: 32px
+      text-transform: uppercase
+      color: $white
+    .section
+      width: 100%
+      padding: 32px 132px 0 32px
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: center
+      border-radius: 6px
+      border: 1px solid $green
+      &__title
+        color: $white2
+        font-family: $font-exo2-bold
+        font-size: 18px
+        line-height: 22px
+      &__txt
+        color: $white3
+        font-family: $font-exo2-regular
+        font-size: 18px
+        margin-bottom: 32px
+      .table
+        width: 470px
+        margin-bottom: 32px
+        .container
+          display: flex
+          flex-direction: column
+          align-items: center
+        &__wrap
+          margin: auto
+          display: flex
+          flex-direction: column
+          align-items: center
+        &__head
+          display: flex
+          align-items: center
+          justify-content: space-between
+          width: 100%
+          border-bottom: 1px solid $dark-gray
+          &-col
+            display: flex
+            justify-content: center
+            align-items: center
+            color: $white2
+            text-align: center
+            font-size: 14px
+            font-family: $font-exo2-regular
+            width: fit-content
+            height: 25px
+            &:nth-child(1)
+              width: 176px
+            &:nth-child(2),&:nth-child(3)
+              width: 105px
+            &:nth-child(4)
+              width: 84px
+        &__row
+          width: 100%
+          display: flex
+          justify-content: space-between
+          align-items: center
+          border-bottom: 1px solid $dark-gray
+        &__body
+          width: 100%
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: space-between
+          gap: 4px
+          &-col
+            color: $grayTitle
+            font-size: 14px
+            font-family: $font-exo2-regular
+            justify-content: center
+            display: flex
+            align-items: center
+            height: 25px
+            &:nth-child(1)
+              width: 176px
+            &:nth-child(2),&:nth-child(3)
+              width: 105px
+            &:nth-child(4)
+              width: 84px
+    .info
+      padding: 32px
+      display: flex
+      flex-direction: column
+      gap: 24px
+      border-radius: 6px
+      background: linear-gradient(180deg, #0E2635 0%, #0B1E2A 100%)
+      &__title
+        font-family: $font-roboto-bold
+        font-size: 32px
+        line-height: 39px
+        color: $white
+      &__txt
+        padding-right: 10px
+        font-family: $font-exo2-regular
+        color: $white2
+        font-size: 18px
+  .bottom
+    &__btn
+      display: none
+
+
+
+
+
+  .conditionsDrop
+    margin-top: 40px
+    padding: 0 0 50px
+    &__drop
+      max-width: 767px
+      margin: auto
+      .dropdown
+        outline: none!important
+        cursor: pointer
+        &[open]
+          summary
+            &:before
+              transform: rotate(180deg)
+        summary::marker,
+        summary::-webkit-details-marker
+          display: none
+        > summary
+          list-style: none
+        summary
+          gap: 5px
+          display: flex
+          justify-content: space-between
+          align-items: center
+          font-family: $font-exo2-bold
+          font-size: 18px
+          padding-bottom: 12px
+          color: $white3
+          outline: none!important
+          position: relative
+          border-bottom: 1px solid $dark-gray2
+          ::marker
+            display: none
+          &::before
+            content: ""
+            display: block
+            min-width: 12px
+            height: 12px
+            background: url("../img/arrow-drop.png") no-repeat 0 0/contain
+            order: 2
+        .drop-txt
+          max-height: 350px
+          margin-top: 10px
+          overflow-y: auto
+          font-size: 16px
+          line-height: 19px
+          color: $white2
+          padding: 20px 15px
+          font-family: $font-exo2-regular
+          &::-webkit-scrollbar-thumb
+            background: $green
+            width: 3px
+            border-radius: 3px
+          &::-webkit-scrollbar
+            background: $black
+            width: 3px
+          li, p
+            font-family: inherit
+            margin-bottom: 16px
+            &:last-child
+              margin-bottom: 0
+        table
+          width: 80%
+          border-collapse: collapse
+          margin-bottom: 32px
+          @media screen and (max-width: 1050px)
+            width: 100%
+          @media screen and (max-width: 632px)
+            td, th
+              font-size: 13px
+          @media screen and (max-width: 375px)
+            td, th
+              font-size: 11px
+              line-height: 14px
+          @media screen and (max-width: 340px)
+            td, th
+              font-size: 10px
+              line-height: 13px
+          td, th
+            text-align: center
+            border: 1px solid #fff
+            color: $white
+          td
+            padding-left: 5px
+
+@keyframes pulseScale
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+//content styles
+.drop
+  .magenta
+    font-family: inherit
+    color: $white
+.retreat1
+  padding-left: 20px
+  strong
+    font-family: $font-exo2-bold
+    color: $white
+  p
+    //&:not(:last-child)
+    padding-bottom: 15px
+
+.retreat2
+  padding-left: 40px
+  strong
+    font-family: $font-exo2-bold
+    color: $white
+  p
+    //&:not(:last-child)
+    padding-bottom: 15px
+
+
+.circle
+  padding-left: 20px
+  &:before
+    content: ''
+    width: 5px
+    height: 5px
+    background: $white
+    border-radius: 50%
+    display: inline-block
+    margin: 0 8px 3px 0
+
+@media screen and (max-width: 600px)
+  .circle
+    padding-left: 15px
+  .retreat1
+    padding-left: 15px
+  .retreat2
+    padding-left: 30px
